@@ -1,0 +1,5 @@
+SELECT dost_id, COUNT(*) AS  liczba_prod /* Aggregate function select ID , count all (with NULL). AS temporary names column. In this case "liczba_prod"*/
+FROM Produkty        /* Table name*/
+WHERE prod_cena >=10 /* Filters all rows for products with price lower than 10*/
+GROUP BY dost_id    /* Grouped by dost_id (ID of product)*/
+HAVING COUNT(*)>=2; /* Spits out group with more than one order*/
