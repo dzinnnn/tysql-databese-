@@ -1,0 +1,7 @@
+  CHAR - Teskst o stałej długości od 1 do 255 znaków.Rozmiar musi zostać określony w trakcie definiowania tablicy.
+  NCHAR - Specjalna postać CHAR zaprojektowana dla znaków wielobajtowych lub Unicode.
+  NVARCHAR - Specjalna postać typu TEXT zaprojektowana dla znaków wielobajtowych lub Unicode.
+  TEXT (nazywany także LONG,MEMO,VARCHAR) - Tekst o zmiennej długości.
+  Typy tekstowe o stałej długości przyjmują stałą liczbę znaków określona w trakcie tworzenia tabeli. Nie zapełnione dane zostają wypełnione spacją.
+  Typy tekstowe o zmiennej długości przechowują tekst o dowolnej długości. Zawsze zapisywane są tylko wprowadzone dane. 
+  SZBD znacznie szybciej sortują i modyfikują kolumny o stałej długości niż kolumny o zminnej długości.
