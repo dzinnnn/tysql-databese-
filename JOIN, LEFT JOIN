@@ -1,0 +1,23 @@
+SELECT k.kl_nazwa,z.zam_numer
+FROM Klienci k
+JOIN Zamowienia z ON z.kl_id=k.kl_id;
+
+SELECT k.kl_nazwa,z.zam_numer
+FROM Klienci k
+LEFT JOIN Zamowienia z ON z.kl_id=k.kl_id
+
+SELECT p.prod_nazwa,ez.zam_numer
+FROM Produkty p 
+LEFT JOIN ElementyZamowienia ez on p.prod_id=ez.prod_id
+ORDER BY prod_nazwa;
+
+SELECT p.prod_nazwa,COUNT(ez.zam_numer) AS 'laczna_liczba_zamowien'
+FROM Produkty p 
+LEFT JOIN ElementyZamowienia ez on p.prod_id=ez.prod_id
+GROUP BY p.prod_nazwa
+ORDER BY prod_nazwa;
+
+SELECT d.dost_id,COUNT(p.prod_id) AS 'liczba_produktow'
+FROM Dostawcy d
+LEFT JOIN Produkty p ON d.dost_id=p.dost_id
+GROUP BY d.dost_id;
