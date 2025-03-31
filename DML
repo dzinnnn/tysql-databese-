@@ -1,0 +1,17 @@
+SELECT * FROM Klienci
+
+INSERT INTO Klienci (kl_id,kl_nazwa,kl_adres,kl_miasto,kl_woj,kl_kod,kl_kraj,kl_kontakt,kl_email)
+			VALUES (9,'Dupnik Dupowski','Gorzkie Żale 7','Boston','POM',54-009,'Polska','Kasia Kasiewska','dupnik883@gmail.com');
+
+
+
+SELECT * INTO KopiaZamowienia from Zamowienia;
+SELECT * INTO KopiaElementyZamowienia FROM ElementyZamowienia;
+
+SELECT * FROM KopiaElementyZamowienia;
+SELECT * FROM KopiaZamowienia;
+
+UPDATE Klienci
+SET 
+	kl_email = null
+WHERE kl_id=9;
